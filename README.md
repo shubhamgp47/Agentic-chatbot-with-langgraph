@@ -43,6 +43,12 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 newgrp docker
+
+# After running runners commands to EC2 Instance run these too
+# Install and start as a service
+sudo ./svc.sh install
+sudo ./svc.sh start
+sudo ./svc.sh status
 ```
 
 > **Note:** Make sure to configure port mapping for port **8501** in your EC2 security group.
